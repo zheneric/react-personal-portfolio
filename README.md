@@ -1,6 +1,8 @@
 # My First Portfolio Website
 This site was built using React via CRA, and styled using SCSS.  
 
+[Live link](ericzheng.netlify.app) 
+
 Cool features include:
 + Mobile-responsive
 + Menu slide-in
