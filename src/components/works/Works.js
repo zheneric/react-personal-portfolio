@@ -29,7 +29,7 @@ export default function Works() {
 
   const handleClick = (direction) => {
     direction === "left"
-      ? setCurrSlide(currSlide > 0 ? currSlide - 1 : 2)
+      ? setCurrSlide(currSlide > 0 ? currSlide - 1 : 1)
       : setCurrSlide(currSlide < data.length - 1 ? currSlide + 1 : 0);
   };
 
