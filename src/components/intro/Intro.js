@@ -9,9 +9,8 @@ export default function Intro() {
           <h1>Hi, I'm Eric 🚀!</h1>
           <h2>A curious, creative, challenge-driven coder.</h2>
           <h3>
-            This is still iteration 1 of my personal website and I'm still at a
-            relatively early stage in my web development journey, so do excuse
-            me if it's not super impressive just yet. But something is better
+            This is still iteration 1 of my personal website, so do excuse me if
+            it's not super impressive just yet. <br /> But something is better
             than nothing...
           </h3>
         </div>

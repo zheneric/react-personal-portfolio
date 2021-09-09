@@ -12,7 +12,7 @@ export default function Menu({ menuOpen, setMenuOpen }) {
           <a href="#works">Featured</a>
         </MenuItem>
         <MenuItem setMenuOpen={setMenuOpen}>
-          <a href="#portfolio">Other Projects</a>
+          <a href="#portfolio">Other</a>
         </MenuItem>
         <MenuItem setMenuOpen={setMenuOpen}>
           <a href="#contact">Contact</a>

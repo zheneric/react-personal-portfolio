@@ -3,7 +3,6 @@ import "./contact.scss";
 import { send } from "emailjs-com";
 
 export default function Contact() {
-  const [message, setMessage] = useState(false);
   const [toSend, setToSend] = useState({
     from_name: "",
     to_name: "Eric",
@@ -13,7 +12,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage(true);
 
     send(
       "service_vzno38b",
@@ -27,10 +25,16 @@ export default function Contact() {
       .catch((err) => {
         console.log("FAILED...", err);
       });
+
+    setToSend({
+      from_name: "",
+      to_name: "Eric",
+      message: "",
+      reply_to: "",
+    });
   };
 
   const handleChange = (e) => {
-    setMessage(false);
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
@@ -47,19 +51,19 @@ export default function Contact() {
             name="from_name"
             value={toSend.from_name}
             onChange={handleChange}
-            placeholder="Name"
+            placeholder="Your name"
             required
           />
           <input
             type="text"
             name="reply_to"
-            placeholder="Email"
+            placeholder="Your email"
             value={toSend.reply_to}
             onChange={handleChange}
             required
           />
           <textarea
-            placeholder="Hello World..."
+            placeholder="Tell me your best joke!"
             name="message"
             id=""
             cols="30"
@@ -68,9 +72,7 @@ export default function Contact() {
             onChange={handleChange}
             required
           ></textarea>
-          <button type="submit" className={message && "msgSent"}>
-            {!message ? "Send" : "Sent!"}
-          </button>
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
