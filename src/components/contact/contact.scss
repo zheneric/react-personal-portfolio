@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .contact {
-  background-color: white;
+  background-color: #fdfffc;
   display: flex;
 
   @include mobile {
@@ -62,8 +62,8 @@
       button {
         width: 150px;
         height: 30px;
-        color: #fff;
-        background-color: $mainColor;
+        color: #fdfffc;
+        background-color: #2ec4b6;
         border: none;
         border-radius: 10px;
         font-weight: 500;
@@ -80,7 +80,7 @@
         }
 
         &.msgSent {
-          background-color: #ff5e5b;
+          background-color: #e71d36;
           cursor: default;
         }
       }

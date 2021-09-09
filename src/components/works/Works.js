@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./works.scss";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import OpenInBrowserIcon from "@material-ui/icons/OpenInBrowser";
 
 export default function Works() {
   const [currSlide, setCurrSlide] = useState(0);
@@ -7,24 +9,21 @@ export default function Works() {
   const data = [
     {
       id: "1",
-      icon: "./assets/mobile.png",
-      title: "Web Design",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      img: "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+      title: "Yodal",
+      desc: "Audio-based community mental healthcare platform built during a weekend hackathon.",
+      caption: "Prototype demo built using React.",
+      img: "./assets/yodal-thumbnail.png",
+      live: "https://yodal.netlify.app",
+      code: "https://github.com/jpur3846/yodal",
     },
     {
       id: "2",
-      icon: "./assets/globe.png",
-      title: "Mobile Application",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img: "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
-    },
-    {
-      id: "3",
-      icon: "./assets/writing.png",
-      title: "Branding",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img: "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+      title: "CliniCall",
+      desc: "Digital healthcare platform that simplifies the patient journey of collecting prescription medication.",
+      caption: "Hi-fidelity prototype designed with Figma.",
+      img: "./assets/clinicall-thumbnail.png",
+      live: "https://www.figma.com/proto/dxF7nQ20bIvXdN0opZyeGu/PDP-Lo-FI-Prototyping?node-id=116%3A5752&starting-point-node-id=116%3A5752",
+      code: "https://www.figma.com/file/dxF7nQ20bIvXdN0opZyeGu/PDP-Lo-FI-Prototyping?node-id=92%3A5630",
     },
   ];
 
@@ -36,6 +35,7 @@ export default function Works() {
 
   return (
     <div className="works" id="works">
+      <h1>Featured</h1>
       <div
         className="slider"
         style={{ transform: `translateX(-${currSlide * 100}vw)` }}
@@ -45,12 +45,17 @@ export default function Works() {
             <div className="item">
               <div className="left">
                 <div className="leftContainer">
-                  <div className="imgContainer">
-                    <img src={d.icon} alt="mobile" />
-                  </div>
                   <h2>{d.title}</h2>
-                  <p>{d.description}</p>
-                  <span>Projects</span>
+                  <p>{d.desc}</p>
+                  <p className="caption">{d.caption}</p>
+                  <span>
+                    <a href={d.live}>
+                      <OpenInBrowserIcon />
+                    </a>
+                    <a href={d.code}>
+                      <GitHubIcon />
+                    </a>
+                  </span>
                 </div>
               </div>
               <div className="right">

@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fdfffc;
 
   h1 {
     font-size: 50px;
@@ -49,7 +50,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: #fdfffc;
       position: relative;
       transition: all 0.5s;
 
@@ -61,6 +62,7 @@
       h3 {
         position: absolute;
         font-size: 20px;
+        color: #fdfffc;
       }
 
       img {
@@ -71,9 +73,9 @@
       }
 
       &:hover {
-        background-color: $mainColor;
+        background-color: #e71d36;
         img {
-          opacity: 0.1;
+          opacity: 0.2;
           z-index: 0;
         }
       }

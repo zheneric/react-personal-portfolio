@@ -1,11 +1,26 @@
 @import "../../global.scss";
 
 .works {
-  background-color: #ff5e5b;
+  background-color: #2ec4b6;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+
+  h1 {
+    font-size: 50px;
+    position: absolute;
+    z-index: 4;
+    color: #e6e6e6;
+    top: 50px;
+
+    @include mobile {
+      font-size: 30px;
+      top: 1.5em;
+    }
+  }
 
   .arrow {
     height: 50px;
@@ -48,7 +63,7 @@
       .item {
         width: 700px;
         height: 100%;
-        background-color: #fff;
+        background-color: #fdfffc;
         border-radius: 20px;
         display: flex;
         align-items: center;
@@ -72,49 +87,51 @@
           }
           .leftContainer {
             width: 90%;
-            height: 70%;
+            height: 80%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            .imgContainer {
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              background-color: coral;
+            margin-left: 20px;
+
+            .caption {
+              font-size: 14px;
+            }
+
+            span {
               display: flex;
-              align-items: center;
-              justify-content: center;
+              flex-direction: row;
 
-              @include mobile {
-                width: 20px;
-                height: 20px;
-              }
-
-              img {
-                width: 25px;
+              a {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #e6e6e6;
+                color: #2ec4b6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                margin-right: 10px;
 
                 @include mobile {
-                  width: 15px;
+                  width: 20px;
+                  height: 20px;
+                }
+
+                &:hover {
+                  background-color: #f1f1f1;
                 }
               }
             }
+
             h2 {
               font-size: 20px;
-              @include mobile {
-                font-size: 13px;
-              }
             }
             p {
-              font-size: 13px;
+              font-size: 16px;
               @include mobile {
                 display: none;
               }
-            }
-            span {
-              font-size: 12px;
-              font-weight: 700;
-              text-decoration: underline;
-              cursor: pointer;
             }
           }
         }
@@ -128,7 +145,6 @@
 
           img {
             width: 400px;
-            transform: rotate(-10deg);
           }
         }
       }
