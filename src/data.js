@@ -28,8 +28,8 @@ export const smallProjectsPortfolio = [
 
 export const comingSoonPortfolio = [
   {
-    id: 3,
-    title: "Kanprint Website Redesign (Freelance)",
+    id: 6,
+    title: "Website Redesign",
     img: "./assets/kanprint-logo.png",
   },
 ];

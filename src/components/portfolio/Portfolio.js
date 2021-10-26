@@ -14,7 +14,7 @@ export default function Portfolio() {
     },
     {
       id: "comingSoon",
-      title: "Coming Soon",
+      title: "Backlog",
     },
   ];
 

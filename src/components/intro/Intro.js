@@ -6,13 +6,11 @@ export default function Intro() {
     <div className="intro" id="intro">
       <div className="wrapper">
         <div className="wrapper-text">
-          <h1>Hi, I'm Eric 🚀!</h1>
-          <h2>A curious, creative, challenge-driven coder.</h2>
-          <h3>
-            This is still iteration 1 of my personal website, so do excuse me if
-            it's not super impressive just yet. <br /> But something is better
-            than nothing...
-          </h3>
+          <h1>👋 Hello World! I'm Eric - </h1>
+          <h2>
+            a pre-penultimate student at UNSW who is passionate about product,
+            tech, and startups.
+          </h2>
         </div>
       </div>
       <a href="#works">
